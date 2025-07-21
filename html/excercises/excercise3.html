@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flight Pickup Reservation Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .form-container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #555;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+        .radio-group {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+        .radio-group input[type="radio"] {
+            width: auto;
+            margin-right: 5px;
+        }
+        .date-group {
+            display: flex;
+            gap: 15px;
+        }
+        .date-group .form-group {
+            flex: 1;
+        }
+        textarea {
+            height: 80px;
+            resize: vertical;
+        }
+        .submit-btn {
+            background-color: #007bff;
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            cursor: pointer;
+            width: 100%;
+            margin-top: 20px;
+        }
+        .submit-btn:hover {
+            background-color: #0056b3;
+        }
+        .required {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h1>Flight Pickup Reservation Form</h1>
+        
+        <form action="#" method="post">
+            <!-- Personal Information -->
+            <div class="form-group">
+                <label for="name">Full Name <span class="required">*</span></label>
+                <input type="text" id="name" name="name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email Address <span class="required">*</span></label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="guests">Number of Guests <span class="required">*</span></label>
+                <input type="number" id="guests" name="guests" min="1" max="10" value="1" required>
+            </div>
+
+            <!-- Pickup Information -->
+            <div class="form-group">
+                <label for="pickup-time">Pickup Time <span class="required">*</span></label>
+                <input type="time" id="pickup-time" name="pickup-time" required>
+            </div>
+
+            <div class="form-group">
+                <label>Free Pickup <span class="required">*</span></label>
+                <div class="radio-group">
+                    <label><input type="radio" name="free-pickup" value="yes" required> Yes</label>
+                    <label><input type="radio" name="free-pickup" value="no" required> No</label>
+                </div>
+            </div>
+
+            <!-- Hotel Information -->
+            <div class="form-group">
+                <label for="room-type">Room Type</label>
+                <select id="room-type" name="room-type">
+                    <option value="">Select Room Type</option>
+                    <option value="standard">Standard Room</option>
+                    <option value="deluxe">Deluxe Room</option>
+                    <option value="suite">Suite</option>
+                    <option value="executive">Executive Room</option>
+                    <option value="presidential">Presidential Suite</option>
+                </select>
+            </div>
+
+            <!-- Travel Dates -->
+            <div class="date-group">
+                <div class="form-group">
+                    <label for="arrival-date">Arrival Date <span class="required">*</span></label>
+                    <input type="date" id="arrival-date" name="arrival-date" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="departure-date">Departure Date <span class="required">*</span></label>
+                    <input type="date" id="departure-date" name="departure-date" required>
+                </div>
+            </div>
+
+            <!-- Flight Information -->
+            <div class="form-group">
+                <label for="flight-number">Flight Number <span class="required">*</span></label>
+                <input type="text" id="flight-number" name="flight-number" placeholder="e.g., AI 101, 6E 234" required>
+            </div>
+
+            <!-- Special Requests -->
+            <div class="form-group">
+                <label for="special-requests">Special Requests</label>
+                <textarea id="special-requests" name="special-requests" placeholder="Please mention any special requirements, dietary preferences, accessibility needs, etc."></textarea>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit" class="submit-btn">Submit Reservation</button>
+        </form>
+    </div>
+
+    <script>
+        // Simple form validation
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const arrivalDate = new Date(document.getElementById('arrival-date').value);
+            const departureDate = new Date(document.getElementById('departure-date').value);
+            
+            if (arrivalDate >= departureDate) {
+                alert('Departure date must be after arrival date.');
+                return;
+            }
+            
+            alert('Reservation submitted successfully! We will contact you shortly.');
+        });
+
+        // Set minimum date to today
+        const today = new Date().toISOString().split('T')[0];
+        document.getElementById('arrival-date').min = today;
+        document.getElementById('departure-date').min = today;
+    </script>
+</body>
+</html>
