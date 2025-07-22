@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,27 +13,34 @@
             padding: 20px;
             background-color: #f5f5f5;
         }
+
         .form-container {
             background-color: white;
             padding: 30px;
             border-radius: 10px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
         }
+
         h1 {
             color: #333;
             text-align: center;
             margin-bottom: 30px;
         }
+
         .form-group {
             margin-bottom: 15px;
         }
+
         label {
             display: block;
             margin-bottom: 5px;
             font-weight: bold;
             color: #555;
         }
-        input, select, textarea {
+
+        input,
+        select,
+        textarea {
             width: 100%;
             padding: 10px;
             border: 1px solid #ddd;
@@ -40,26 +48,32 @@
             font-size: 16px;
             box-sizing: border-box;
         }
+
         .radio-group {
             display: flex;
             gap: 20px;
             align-items: center;
         }
+
         .radio-group input[type="radio"] {
             width: auto;
             margin-right: 5px;
         }
+
         .date-group {
             display: flex;
             gap: 15px;
         }
+
         .date-group .form-group {
             flex: 1;
         }
+
         textarea {
             height: 80px;
             resize: vertical;
         }
+
         .submit-btn {
             background-color: #007bff;
             color: white;
@@ -71,18 +85,21 @@
             width: 100%;
             margin-top: 20px;
         }
+
         .submit-btn:hover {
             background-color: #0056b3;
         }
+
         .required {
             color: red;
         }
     </style>
 </head>
+
 <body>
     <div class="form-container">
         <h1>Flight Pickup Reservation Form</h1>
-        
+
         <form action="#" method="post">
             <!-- Personal Information -->
             <div class="form-group">
@@ -149,7 +166,8 @@
             <!-- Special Requests -->
             <div class="form-group">
                 <label for="special-requests">Special Requests</label>
-                <textarea id="special-requests" name="special-requests" placeholder="Please mention any special requirements, dietary preferences, accessibility needs, etc."></textarea>
+                <textarea id="special-requests" name="special-requests"
+                    placeholder="Please mention any special requirements, dietary preferences, accessibility needs, etc."></textarea>
             </div>
 
             <!-- Submit Button -->
@@ -159,17 +177,17 @@
 
     <script>
         // Simple form validation
-        document.querySelector('form').addEventListener('submit', function(e) {
+        document.querySelector('form').addEventListener('submit', function (e) {
             e.preventDefault();
-            
+
             const arrivalDate = new Date(document.getElementById('arrival-date').value);
             const departureDate = new Date(document.getElementById('departure-date').value);
-            
+
             if (arrivalDate >= departureDate) {
                 alert('Departure date must be after arrival date.');
                 return;
             }
-            
+
             alert('Reservation submitted successfully! We will contact you shortly.');
         });
 
@@ -179,4 +197,5 @@
         document.getElementById('departure-date').min = today;
     </script>
 </body>
+
 </html>

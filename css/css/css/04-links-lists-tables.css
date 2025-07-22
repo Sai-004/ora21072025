@@ -1,8 +1,8 @@
-div{
+div {
   margin: 30px;
 }
 
-a.tutorial{
+a.tutorial {
   margin: 20px;
   padding: 10px;
   border-style: solid;
@@ -28,17 +28,16 @@ a.tutorial:active {
 
 /* -------------------- List styling ----------------- */
 
-ol{
+ol {
   background: slateblue;
   padding: 20px;
   width: 50%;
 }
 
-
-ol li{
+ol li {
   background: brown;
   padding: 5px;
-  margin-left:  35px;
+  margin-left: 35px;
   font-weight: bold;
 }
 
@@ -56,7 +55,10 @@ table, tr, td, th{
 }
 */
 
-table, tr, td, th{
+table,
+tr,
+td,
+th {
   font-size: 20px;
   font-family: sans-serif;
   text-align: center;
@@ -65,28 +67,29 @@ table, tr, td, th{
   border-collapse: collapse;
 }
 
-caption{
+caption {
   padding-bottom: 30px;
   font-size: 20px;
   font-weight: bold;
 }
 
-th{
+th {
   border-top: 2px solid red;
 }
 
-th, td{
+th,
+td {
   border-bottom: 2px solid red;
 }
 
-th{
+th {
   background-color: lightblue;
 }
 
-tr:nth-child(even){
+tr:nth-child(even) {
   background-color: lightgrey;
 }
 
-tr:hover{
+tr:hover {
   background-color: slateblue;
 }

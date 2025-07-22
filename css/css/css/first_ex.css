@@ -1,9 +1,7 @@
-
 body {
   background-color: rgb(230, 178, 173);
-  background-image: 'pics/matrix.jpg';
+  background-image: "pics/matrix.jpg";
 }
-
 
 h1 {
   color: white;

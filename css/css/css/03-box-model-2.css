@@ -1,11 +1,12 @@
-*{
-  border-style: solid;  /* 3 values Top, left + right, Bottom */
-                                      /* 2 values top + bottom, left + right */
-                                      /* 4 values top right bottom left */
-                                      /* 1 values top + right + bottom + left */
+* {
+  border-style: solid; /* 3 values Top, left + right, Bottom */
+  /* 2 values top + bottom, left + right */
+  /* 4 values top right bottom left */
+  /* 1 values top + right + bottom + left */
 }
 
-p, h4{
+p,
+h4 {
   border-style: hidden;
   /*border: 5px solid red;*/
 }
@@ -13,16 +14,15 @@ p, h4{
 p {
   /*padding: 50px;*/
   padding-left: 50px;
-  font-family: 'Times New Roman', Times, serif;
+  font-family: "Times New Roman", Times, serif;
 }
 
-
-.country{
+.country {
   background-color: lightblue;
   margin: 40px 40px 40px 40px;
 }
 
-#usa{
+#usa {
   background-color: lightgrey;
   margin-top: 100px;
   margin-bottom: 100px;
@@ -31,7 +31,7 @@ p {
   padding: 40px;
 }
 
-#euro{
+#euro {
   background-color: mediumseagreen;
   margin: 100px 100px 100px 100px;
   padding: 40px;
