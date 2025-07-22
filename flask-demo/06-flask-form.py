@@ -22,7 +22,7 @@ def process():
 
 @app.route('/download', methods=['GET', 'POST'])
 def download():
-    return send_file(r"C:\Users\mindf\Desktop\current-training\oracle-training\html\pics\pic-kailash.jpg")
+    return send_file(r"C:\Users\srmunag\Documents\GitHub\ora21072025\html\pics\pic-kailash.jpg")
     #return send_file(r"C:\Users\Purushotham\Desktop\Research\HTML\code\pics\google.jpg", attachment_filename='') # browser saves it
 
 @app.route('/calc')
