@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Simple To-Do List</title>
+    <style>
+        .container {
+            display: flex;
+            height: 100vh;
+        }
+
+        .left,
+        .right {
+            flex: 1;
+            padding: 40px;
+        }
+
+        .left {
+            background: #f0f0f0;
+        }
+
+        #itemList {
+            /* list-style: none; */
+            padding: 0;
+        }
+
+        #itemList li {
+            padding: 8px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        input[type="text"] {
+            width: 80%;
+            padding: 8px;
+            margin: 5px;
+            font-size: 16px;
+        }
+
+        button {
+            padding: 8px 16px;
+            margin: 8px;
+            width: 25%;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #b9c8d8;
+            border-width: 1px;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="left">
+            <h2>Add/Remove Item</h2>
+            <p>Press Enter to add item.</p>
+            <input type="text" id="itemInput" placeholder="Enter item" />
+            <br>
+            <button onclick="addItem()">Add</button>
+            <button onclick="removeItem()">Remove</button>
+        </div>
+        <div class="right">
+            <h2>List of Items</h2>
+            <ol id="itemList"></ol>
+        </div>
+    </div>
+    <script>
+        const itemInput = document.getElementById('itemInput');
+        const itemList = document.getElementById('itemList');
+        let items = [];
+
+        function createList() {
+            itemList.innerHTML = '';
+            items.forEach(item => {
+                const li = document.createElement('li');
+                li.textContent = item;
+                itemList.appendChild(li);
+            });
+        }
+
+        function addItem() {
+            const value = itemInput.value.trim();
+            if (value && !items.includes(value)) {
+                items.push(value);
+                createList();
+                itemInput.value = '';
+            }
+            else if (items.includes(value)) {
+                alert('Item already exists in the list.');
+            }
+            else {
+                alert('Please enter a valid item.');
+            }
+        }
+
+        function removeItem() {
+            const value = itemInput.value.trim();
+            const idx = items.indexOf(value);
+            if (idx !== -1) {
+                items.splice(idx, 1);
+                createList();
+                itemInput.value = '';
+            }
+            else {
+                alert('Item not found in the list.');
+            }
+        }
+
+        itemInput.addEventListener('keydown', function (e) {
+            if (e.key === 'Enter') {
+                addItem();
+            }
+        });
+    </script>
+</body>
+
+</html>

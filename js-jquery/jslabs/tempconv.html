@@ -1,27 +1,52 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>Temperature Converter</title>
-  </head>
-  <body>
-    <h3>
-      <label>Fahrenheit</label>
-      <input id="inputFahrenheit" type="number" placeholder="Fahrenheit"
-      oninput="toCelciusConverter(this.value)">
-      <p>Celsius: <span id="outputCelsius"></span></p>
-      <hr>
-      <label>Celcius</label>
-      <input id="inputFahrenheit" type="number" placeholder="Celcius"
-      oninput="toFarenheitConverter(this.value)">
-      <p>Fahrenheit<span id="outputCelsius"></span></p>
-    </h3>
-    
+
+<head>
+  <meta charset="utf-8">
+  <title>Temperature Converter</title>
+</head>
+
+<body>
+  <h3>
+    <label>Fahrenheit</label>
+    <input id="inputFahrenheit" type="number" placeholder="Fahrenheit" oninput="toCelciusConverter(this.value)">
+    <p>Celsius: <span id="outputCelsius"></span></p>
+    <hr>
+    <label>Celcius</label>
+    <input id="inputCelsius" type="number" placeholder="Celcius" oninput="toFarenheitConverter(this.value)">
+    <p>Fahrenheit: <span id="outputFahrenheit"></span></p>
+  </h3>
+
 
   <script>
+    // (F - 32) * 5 = C * 9
     
+    function toCelciusConverter(fahrenheit) {
+      if (fahrenheit === "") {
+        document.getElementById("outputCelsius").innerText = "";
+        return;
+      }
+      const celsius = (fahrenheit - 32) * 5 / 9;
+      document.getElementById("outputCelsius").innerText = celsius.toFixed(2);
+    }
 
+    function toFarenheitConverter(celsius) {
+      if (celsius === "") {
+        document.getElementById("outputFahrenheit").innerText = "";
+        return;
+      }
+      const fahrenheit = (celsius * 9 / 5) + 32;
+      document.getElementById("outputFahrenheit").innerText = fahrenheit.toFixed(2);
+    }
+    document.getElementById("inputFahrenheit").addEventListener("input", function () {
+      toCelciusConverter(this.value);
+    });
+
+    document.getElementById("inputCelsius").addEventListener("input", function () {
+      toFarenheitConverter(this.value);
+    });
   </script>
-    
-  </body>
+
+</body>
+
 </html>
