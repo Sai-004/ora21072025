@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customers</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="min-h-screen bg-gray-100 font-sans">
+    <header class="bg-gray-800 text-white py-4 text-center">
+        <h1 class="text-2xl font-bold">Customers</h1>
+    </header>
+
+    <nav class="bg-gray-700 text-white py-3 text-center">
+        <a href="/"
+            class="text-white mx-4 px-3 py-2 rounded hover:bg-gray-600 hover:text-gray-200 transition-colors duration-200">Home</a>
+        <a href="/incident"
+            class="text-white mx-4 px-3 py-2 rounded hover:bg-gray-600 hover:text-gray-200 transition-colors duration-200">Incidents</a>
+        <a href="/employee"
+            class="text-white mx-4 px-3 py-2 rounded hover:bg-gray-600 hover:text-gray-200 transition-colors duration-200">Employees</a>
+        <a href="/customers" class="text-white mx-4 px-3 py-2 rounded bg-gray-600">Customers</a>
+        <a href="/about"
+            class="text-white mx-4 px-3 py-2 rounded hover:bg-gray-600 hover:text-gray-200 transition-colors duration-200">About</a>
+    </nav>
+
+    <main class="max-w-6xl mx-auto p-8 bg-gray-200 min-h-screen">
+        <h2 class="text-3xl font-semibold mb-4 text-gray-800">Customer List</h2>
+        <p class="text-gray-600 text-lg mb-6">Here you can find a list of all customers.</p>
+
+        <div class="bg-white rounded-lg shadow-md overflow-hidden">
+            <div class="bg-gray-50 px-6 py-4 border-b">
+                <h3 class="text-lg font-medium text-gray-800">Customer Directory</h3>
+            </div>
+            <div class="divide-y divide-gray-200">
+                <div class="px-6 py-4 hover:bg-gray-50 transition-colors">
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <h4 class="text-lg font-semibold text-gray-800">Acme Corporation</h4>
+                            <p class="text-gray-600">Enterprise Client • Active since 2020</p>
+                        </div>
+                        <span
+                            class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium">Active</span>
+                    </div>
+                </div>
+                <div class="px-6 py-4 hover:bg-gray-50 transition-colors">
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <h4 class="text-lg font-semibold text-gray-800">Tech Solutions Inc.</h4>
+                            <p class="text-gray-600">SMB Client • Active since 2021</p>
+                        </div>
+                        <span
+                            class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium">Active</span>
+                    </div>
+                </div>
+                <div class="px-6 py-4 hover:bg-gray-50 transition-colors">
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <h4 class="text-lg font-semibold text-gray-800">Global Industries</h4>
+                            <p class="text-gray-600">Enterprise Client • Active since 2019</p>
+                        </div>
+                        <span
+                            class="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm font-medium">Pending</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-gray-800 text-white text-center py-4 mt-auto">
+        <p>&copy; 2023 Your Company. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="min-h-screen bg-gray-100 font-sans">
+    <header class="bg-gray-800 text-white py-4 text-center">
+        <h1 class="text-2xl font-bold">Dashboard</h1>
+    </header>
+
+    <nav class="bg-gray-700 text-white py-3 text-center">
+        <a href="/"
+            class="text-white mx-4 px-3 py-2 rounded hover:bg-gray-600 hover:text-gray-200 transition-colors duration-200">Home</a>
+        <a href="/incident"
+            class="text-white mx-4 px-3 py-2 rounded hover:bg-gray-600 hover:text-gray-200 transition-colors duration-200">Incidents</a>
+        <a href="/customers"
+            class="text-white mx-4 px-3 py-2 rounded hover:bg-gray-600 hover:text-gray-200 transition-colors duration-200">Customers</a>
+        <a href="/employee"
+            class="text-white mx-4 px-3 py-2 rounded hover:bg-gray-600 hover:text-gray-200 transition-colors duration-200">Employees</a>
+        <a href="/about"
+            class="text-white mx-4 px-3 py-2 rounded hover:bg-gray-600 hover:text-gray-200 transition-colors duration-200">About</a>
+    </nav>
+
+    <main class="max-w-6xl mx-auto p-8 bg-gray-200 min-h-screen">
+        <h2 class="text-3xl font-semibold mb-4 text-gray-800">Welcome to the Dashboard</h2>
+        <p class="text-gray-600 mb-6 text-lg">Here you can find an overview of your activities.</p>
+
+        <h3 class="text-2xl font-medium mb-4 text-gray-700">Quick Links</h3>
+        <ul class="flex flex-col space-y-3 mb-6">
+            <li><a href="/incident"
+                    class="inline-block bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition-colors duration-200">View
+                    Incidents</a></li>
+            <li><a href="/customers"
+                    class="inline-block bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600 transition-colors duration-200">View
+                    Customers</a></li>
+            <li><a href="/employee"
+                    class="inline-block bg-purple-500 text-white px-4 py-2 rounded hover:bg-purple-600 transition-colors duration-200">View
+                    Employees</a></li>
+            <li><a href="/about"
+                    class="inline-block bg-indigo-500 text-white px-4 py-2 rounded hover:bg-indigo-600 transition-colors duration-200">Learn
+                    About Us</a></li>
+        </ul>
+        <p class="text-gray-600 mb-4">Use the navigation links to explore different sections of the website.</p>
+        <p class="text-gray-600">Stay updated with the latest information and reports.</p>
+    </main>
+
+    <footer class="bg-gray-800 text-white text-center py-4 mt-auto">
+        <p>&copy; 2023 Your Company. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>

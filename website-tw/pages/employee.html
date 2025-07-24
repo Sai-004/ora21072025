@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employees</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="min-h-screen bg-gray-100 font-sans">
+    <header class="bg-gray-800 text-white py-4 text-center">
+        <h1 class="text-2xl font-bold">Employees</h1>
+    </header>
+
+    <nav class="bg-gray-700 text-white py-3 text-center">
+        <a href="/"
+            class="text-white mx-4 px-3 py-2 rounded hover:bg-gray-600 hover:text-gray-200 transition-colors duration-200">Home</a>
+        <a href="/incident"
+            class="text-white mx-4 px-3 py-2 rounded hover:bg-gray-600 hover:text-gray-200 transition-colors duration-200">Incidents</a>
+        <a href="/customers"
+            class="text-white mx-4 px-3 py-2 rounded hover:bg-gray-600 hover:text-gray-200 transition-colors duration-200">Customers</a>
+        <a href="/employee" class="text-white mx-4 px-3 py-2 rounded bg-gray-600">Employees</a>
+        <a href="/about"
+            class="text-white mx-4 px-3 py-2 rounded hover:bg-gray-600 hover:text-gray-200 transition-colors duration-200">About</a>
+    </nav>
+
+    <main class="max-w-6xl mx-auto p-8 bg-gray-200 min-h-screen">
+        <h2 class="text-3xl font-semibold mb-4 text-gray-800">Employee List</h2>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
+            <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
+                <div class="flex items-center mb-4">
+                    <div
+                        class="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center text-white font-bold text-lg mr-4">
+                        J
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-semibold text-gray-800">John Smith</h3>
+                        <p class="text-gray-600 text-sm">Senior Developer</p>
+                    </div>
+                </div>
+                <div class="space-y-2">
+                    <p class="text-gray-600"><span class="font-medium">Department:</span> Engineering</p>
+                    <p class="text-gray-600"><span class="font-medium">Experience:</span> 5 years</p>
+                    <span
+                        class="inline-block bg-green-100 text-green-800 px-2 py-1 rounded text-xs font-medium">Active</span>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
+                <div class="flex items-center mb-4">
+                    <div
+                        class="w-12 h-12 bg-purple-500 rounded-full flex items-center justify-center text-white font-bold text-lg mr-4">
+                        S
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-semibold text-gray-800">Sarah Johnson</h3>
+                        <p class="text-gray-600 text-sm">Product Manager</p>
+                    </div>
+                </div>
+                <div class="space-y-2">
+                    <p class="text-gray-600"><span class="font-medium">Department:</span> Product</p>
+                    <p class="text-gray-600"><span class="font-medium">Experience:</span> 7 years</p>
+                    <span
+                        class="inline-block bg-green-100 text-green-800 px-2 py-1 rounded text-xs font-medium">Active</span>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
+                <div class="flex items-center mb-4">
+                    <div
+                        class="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center text-white font-bold text-lg mr-4">
+                        M
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-semibold text-gray-800">Mike Davis</h3>
+                        <p class="text-gray-600 text-sm">UI/UX Designer</p>
+                    </div>
+                </div>
+                <div class="space-y-2">
+                    <p class="text-gray-600"><span class="font-medium">Department:</span> Design</p>
+                    <p class="text-gray-600"><span class="font-medium">Experience:</span> 3 years</p>
+                    <span class="inline-block bg-yellow-100 text-yellow-800 px-2 py-1 rounded text-xs font-medium">On
+                        Leave</span>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-gray-800 text-white text-center py-4 mt-auto">
+        <p>&copy; 2023 Your Company. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
