@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Knockout Demo</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.5.1/knockout-min.js"></script>
+  <script src="./static/script.js" defer></script> <!-- Your external JS file -->
+</head>
+<body>
+  <h2 data-bind="text: greeting"></h2>
+  <input data-bind="value: greeting" />
+
+  <!-- Knockout will apply bindings from the external JS -->
+</body>
+</html>
