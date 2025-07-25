@@ -9,7 +9,7 @@ require.config({
     //waitSeconds: 15
   });
 
-define(['add', 'helper/sub', 'helper/mul','helper/div'], function(add, sub, mul, div){
+define(['add', 'helper/sub', 'helper/mul','helper/div', 'square/square'], function(add, sub, mul, div, square){
     return {
         getresult: function(option, opa, opb){
             switch(option){
@@ -20,11 +20,9 @@ define(['add', 'helper/sub', 'helper/mul','helper/div'], function(add, sub, mul,
             }
         },
         squaring: function(a , b){
-          
-        }
-        
+            return square.sq(a + b);
+        } 
     }
-
 })
 
 

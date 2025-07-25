@@ -1,32 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
-    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.0/knockout-min.js"></script>
 </head>
+
 <body>
 
-    
-    <input>
-    <input>
-    <h3>The sum of squares of two number is <span></span></h3>
 
-    
+    <input type="number" data-bind="textInput: firstNumber">
+    <input type="number" data-bind="textInput: secondNumber">
+    <h3>The sum of squares of two number is <span data-bind="text: sumOfSquares"></span></h3>
+
     <script>
         //viewmodel
-        function viewModel(){
+        function viewModel() {
+            this.firstNumber = ko.observable(0);
+            this.secondNumber = ko.observable(0);
 
-
+            //computed observable
+            this.sumOfSquares = ko.computed(function () {
+                return this.firstNumber() ** 2 + this.secondNumber() ** 2;
+            }, this);
         }
 
         //binding call
-        ko.applyBindings();
-        
+        ko.applyBindings(new viewModel());
+
     </script>
 </body>
-</html>
 
+</html>
