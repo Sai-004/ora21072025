@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Incidents</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="/assets/script.js"></script>
+    <script>$(document).ready(setupIncidentForm);</script>
+</head>
+<body class="bg-gray-100">
+    <header class="bg-[#925ee7] text-white p-4 text-xl">Incident Management</header>
+    <nav class="bg-[#080000] text-white p-3">
+        <ul class="flex space-x-4">
+            <li><a href="/dashboard" class="hover:underline">Dashboard</a></li>
+            <li><a href="/incidents" class="hover:underline">Incidents</a></li>
+            <li><a href="/customers" class="hover:underline">Customers</a></li>
+            <li><a href="/about" class="hover:underline">About</a></li>
+        </ul>
+    </nav>
+    <main class="p-6 max-w-xl mx-auto">
+    <form id="incidentForm" class="bg-gray-100 p-6 rounded shadow">
+        <input type="text" name="name" placeholder="Your Name" class="block w-full mb-3 p-2 border rounded" required>
+        <select name="type" class="block w-full mb-3 p-2 border rounded">
+          <option value="">Select Incident Type</option>
+          <option>Fire</option>
+          <option>Traffic</option>
+          <option>EMS</option>
+          <option>Other</option>
+        </select>
+        <input type="text" name="location" placeholder="Location" class="block w-full mb-3 p-2 border rounded" required>
+        <textarea name="details" placeholder="Details" class="block w-full mb-3 p-2 border rounded" required></textarea>
+        <button type="submit" class="bg-purple-600 text-white px-4 py-2 rounded hover:bg-purple-700">Submit</button>
+      </form>
+      <div id="message" class="text-green-600 mt-4"></div>
+    </main>
+    <footer class="bg-[#925ee7] text-white p-4 text-center">© 2025 Incident App</footer>
+</body>
+</html>
